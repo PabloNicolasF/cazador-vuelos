@@ -116,7 +116,7 @@ def scan_ultra_low_flights(months_ahead=(1, 2, 4, 6)):
 
     for dest_code, dest_info in DESTINATIONS.items():
         best_for_dest = None
-        for origin in ["EZE"]:  # EZE concentra todos los intercontinentales de BUE
+        for origin in ORIGINS:
             for dep_date, ret_date in windows:
                 try:
                     q = create_query(
